@@ -33,6 +33,7 @@ from hvcc.generators.c2dpf import c2dpf
 from hvcc.generators.c2owl import c2owl
 from hvcc.generators.c2pdext import c2pdext
 from hvcc.generators.c2wwise import c2wwise
+from hvcc.generators.c2fmod import c2fmod
 from hvcc.generators.c2unity import c2unity
 from hvcc.generators.types.meta import Meta
 
@@ -370,6 +371,11 @@ def compile_dataflow(
         if verbose:
             print("--> Generating Wwise plugin")
         results["c2wwise"] = c2wwise.c2wwise.compile(**gen_args)
+        
+    if "fmod" in generators:
+        if verbose:
+            print("--> Generating FMOD plugin")
+        results["c2fmod"] = c2fmod.c2fmod.compile(**gen_args)
 
     return results
 
