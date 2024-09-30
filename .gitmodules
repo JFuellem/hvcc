@@ -4,3 +4,6 @@
 [submodule "tests/src/tinywav"]
 	path = tests/src/tinywav
 	url = https://github.com/mhroth/tinywav.git
+[submodule "hvcc/generators/c2fmod/static"]
+	path = hvcc/generators/c2fmod/static
+	url = https://github.com/JFuellem/HeavyPd-FMOD-Wrapper.git
